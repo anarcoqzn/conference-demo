@@ -1,0 +1,10 @@
+access database through bash:
+docker exec -it postgres-db psql -U postgres
+
+copy files:
+docker cp create_tables.sql postgres-db:/create_tables.sql
+
+exec sql file:
+docker exec -it postgres-demo psql -d conference_app -f insert_data.sql -U postgres
+
+repo url: https://github.com/dlbunker/ps-first-spring-boot-app/tree/master/database/postgresql
